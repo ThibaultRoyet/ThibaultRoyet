@@ -6,13 +6,13 @@
   <title>Thibault Royet — Senior Python/AI Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Outfit:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Outfit:wght@300;400;500;600&family=DM+Mono:ital,wght@0,400;0,500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- NAV -->
-  <nav class="nav">
+  <nav class="nav" id="nav">
     <span class="nav-logo">TR</span>
     <div class="nav-links">
       <a href="#experience">Expérience</a>
@@ -21,208 +21,203 @@
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-grid">
+  <!-- ═══ BENTO HERO ═══ -->
+  <section class="bento-section">
 
-      <!-- Card: Identity -->
-      <div class="card card--identity">
-        <div class="card-eyebrow">Disponible · Île de France</div>
-        <h1 class="hero-name">Thibault<br>Royet</h1>
-        <p class="hero-title">Senior Python / AI Engineer</p>
-        <p class="hero-bio">
-          5 ans d'expérience en développement backend, data engineering et IA appliquée.
-          De la recherche R&amp;D à la production chez LexisNexis — en passant par Safran et SystemX.
-        </p>
-        <div class="hero-traits">
-          <span>Curieux</span><span>Autonome</span><span>Proactif</span>
+    <!-- CARD : Identity -->
+    <div class="card card-identity">
+      <p class="eyebrow">Disponible · Île de France</p>
+      <h1 class="hero-name">Thibault<br>Royet</h1>
+      <p class="hero-title">Senior Python / AI Engineer</p>
+      <p class="hero-bio">
+        5 ans d'expérience en développement backend, data engineering et IA appliquée.
+        De la R&D (SystemX, Safran) à la production LLM (LexisNexis).
+      </p>
+      <div class="trait-row">
+        <span class="trait">Curieux</span>
+        <span class="trait">Autonome</span>
+        <span class="trait">Proactif</span>
+      </div>
+      <div class="btn-row">
+        <a href="https://www.linkedin.com/in/thibault-royet" target="_blank" class="btn btn-primary">LinkedIn ↗</a>
+        <a href="mailto:thibaultroyet@gmail.com" class="btn btn-ghost">Email</a>
+      </div>
+    </div>
+
+    <!-- CARD : Photo -->
+    <div class="card card-photo">
+      <img src="photo.png" alt="Thibault Royet" />
+      <div class="photo-badge">5 ans d'exp.</div>
+    </div>
+
+    <!-- CARD : Skills -->
+    <div class="card card-skills js-skills">
+      <p class="eyebrow">Compétences</p>
+      <div class="skill-list">
+        <div class="skill-row">
+          <span class="skill-label">Python / C++</span>
+          <div class="bar-track"><div class="bar-fill" style="--p: 100%"></div></div>
+          <span class="skill-val mono">5/5</span>
         </div>
-        <div class="hero-actions">
-          <a href="https://www.linkedin.com/in/thibault-royet" target="_blank" class="btn btn--primary">LinkedIn</a>
-          <a href="mailto:thibaultroyet@gmail.com" class="btn btn--ghost">thibaultroyet@gmail.com</a>
+        <div class="skill-row">
+          <span class="skill-label">OOP / API REST</span>
+          <div class="bar-track"><div class="bar-fill" style="--p: 100%"></div></div>
+          <span class="skill-val mono">5/5</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Database / CI/CD</span>
+          <div class="bar-track"><div class="bar-fill" style="--p: 80%"></div></div>
+          <span class="skill-val mono">4/5</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Cloud / Monitoring</span>
+          <div class="bar-track"><div class="bar-fill" style="--p: 60%"></div></div>
+          <span class="skill-val mono">3/5</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Java / JS / Scala</span>
+          <div class="bar-track"><div class="bar-fill" style="--p: 60%"></div></div>
+          <span class="skill-val mono">3/5</span>
         </div>
       </div>
+    </div>
 
-      <!-- Card: Photo -->
-      <div class="card card--photo">
-        <img src="photo.png" alt="Thibault Royet" />
-        <div class="photo-overlay">
-          <span class="mono">5 ans d'exp.</span>
+    <!-- CARD : Expertise -->
+    <div class="card card-expertise">
+      <p class="eyebrow">Profil technique</p>
+      <div class="xp-bar-wrap">
+        <div class="xp-bar">
+          <div class="xp-seg" style="--w:32%; --c:#72243D;" title="Backend"></div>
+          <div class="xp-seg" style="--w:32%; --c:#a05c1e;" title="Data Eng."></div>
+          <div class="xp-seg" style="--w:16%; --c:#c9a227;" title="DevOps"></div>
+          <div class="xp-seg" style="--w:12%; --c:#3a7a5e;" title="MLOps"></div>
+          <div class="xp-seg" style="--w:8%;  --c:#3a5a9e;" title="Data Sci."></div>
         </div>
       </div>
+      <div class="xp-legend">
+        <div class="xp-item"><span style="background:#72243D"></span>Backend <em>32%</em></div>
+        <div class="xp-item"><span style="background:#a05c1e"></span>Data Eng. <em>32%</em></div>
+        <div class="xp-item"><span style="background:#c9a227"></span>DevOps <em>16%</em></div>
+        <div class="xp-item"><span style="background:#3a7a5e"></span>MLOps <em>12%</em></div>
+        <div class="xp-item"><span style="background:#3a5a9e"></span>Data Sci. <em>8%</em></div>
+      </div>
+    </div>
 
-      <!-- Card: Stack rapide -->
-      <div class="card card--stack">
-        <div class="card-eyebrow">Stack principale</div>
-        <div class="stack-pills">
-          <span class="pill pill--hot">Python</span>
-          <span class="pill pill--hot">FastAPI</span>
-          <span class="pill pill--hot">LLM</span>
+    <!-- CARD : Stack -->
+    <div class="card card-stack">
+      <p class="eyebrow">Technologies</p>
+      <div class="stack-group">
+        <p class="stack-sub">Software</p>
+        <div class="pill-row">
+          <span class="pill pill-hot">FastAPI</span>
+          <span class="pill pill-hot">Python</span>
+          <span class="pill">Pydantic</span>
+          <span class="pill">Numpy</span>
+          <span class="pill">Google-ADK</span>
+        </div>
+      </div>
+      <div class="stack-group">
+        <p class="stack-sub">DevOps</p>
+        <div class="pill-row">
           <span class="pill">Docker</span>
           <span class="pill">Kubernetes</span>
-          <span class="pill">C++</span>
+          <span class="pill">CI/CD</span>
+          <span class="pill">GitLab</span>
+          <span class="pill">ArgoCD</span>
+        </div>
+      </div>
+      <div class="stack-group">
+        <p class="stack-sub">Data & IA</p>
+        <div class="pill-row">
+          <span class="pill pill-hot">LLM</span>
+          <span class="pill pill-hot">OpenAI</span>
+          <span class="pill pill-hot">Claude</span>
+          <span class="pill">SolR</span>
+          <span class="pill">Airflow</span>
+          <span class="pill">PySpark</span>
           <span class="pill">MongoDB</span>
           <span class="pill">SQL</span>
+          <span class="pill">DataBricks</span>
         </div>
       </div>
-
-      <!-- Card: Skills bars -->
-      <div class="card card--skills">
-        <div class="card-eyebrow">Compétences</div>
-        <div class="skill-list">
-          <div class="skill-row">
-            <span>Python / C++</span>
-            <div class="bar-track"><div class="bar-fill" style="--p:100%"></div></div>
-            <span class="mono skill-score">5/5</span>
-          </div>
-          <div class="skill-row">
-            <span>OOP / API REST</span>
-            <div class="bar-track"><div class="bar-fill" style="--p:100%"></div></div>
-            <span class="mono skill-score">5/5</span>
-          </div>
-          <div class="skill-row">
-            <span>Database / CI/CD</span>
-            <div class="bar-track"><div class="bar-fill" style="--p:80%"></div></div>
-            <span class="mono skill-score">4/5</span>
-          </div>
-          <div class="skill-row">
-            <span>Cloud / Monitoring</span>
-            <div class="bar-track"><div class="bar-fill" style="--p:60%"></div></div>
-            <span class="mono skill-score">3/5</span>
-          </div>
-          <div class="skill-row">
-            <span>Java / JS / Scala</span>
-            <div class="bar-track"><div class="bar-fill" style="--p:60%"></div></div>
-            <span class="mono skill-score">3/5</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card: Expertise répartition -->
-      <div class="card card--expertise">
-        <div class="card-eyebrow">Profil</div>
-        <div class="expertise-rings">
-          <div class="ring-item">
-            <div class="ring" style="--pct:32; --clr:#72243D">
-              <svg viewBox="0 0 36 36"><circle class="ring-bg" cx="18" cy="18" r="15.9"/><circle class="ring-arc" cx="18" cy="18" r="15.9" style="stroke:#72243D; stroke-dasharray: calc(var(--pct) * 1) 100"/></svg>
-              <span>32%</span>
-            </div>
-            <p>Backend</p>
-          </div>
-          <div class="ring-item">
-            <div class="ring" style="--pct:32; --clr:#8B6914">
-              <svg viewBox="0 0 36 36"><circle class="ring-bg" cx="18" cy="18" r="15.9"/><circle class="ring-arc" cx="18" cy="18" r="15.9" style="stroke:#8B6914; stroke-dasharray: calc(var(--pct) * 1) 100"/></svg>
-              <span>32%</span>
-            </div>
-            <p>Data Eng.</p>
-          </div>
-          <div class="ring-item">
-            <div class="ring" style="--pct:16; --clr:#A0522D">
-              <svg viewBox="0 0 36 36"><circle class="ring-bg" cx="18" cy="18" r="15.9"/><circle class="ring-arc" cx="18" cy="18" r="15.9" style="stroke:#A0522D; stroke-dasharray: calc(var(--pct) * 1) 100"/></svg>
-              <span>16%</span>
-            </div>
-            <p>DevOps</p>
-          </div>
-          <div class="ring-item">
-            <div class="ring" style="--pct:12; --clr:#B8860B">
-              <svg viewBox="0 0 36 36"><circle class="ring-bg" cx="18" cy="18" r="15.9"/><circle class="ring-arc" cx="18" cy="18" r="15.9" style="stroke:#B8860B; stroke-dasharray: calc(var(--pct) * 1) 100"/></svg>
-              <span>12%</span>
-            </div>
-            <p>MLOps</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card: Stat -->
-      <div class="card card--stat">
-        <div class="stat-number">5+</div>
-        <div class="stat-label">années<br>d'expérience</div>
-      </div>
-
-      <!-- Card: Secteurs -->
-      <div class="card card--sectors">
-        <div class="card-eyebrow">Secteurs</div>
-        <div class="sector-list">
-          <div class="sector-item">
-            <span class="sector-icon">⚖️</span>
-            <span>LegalTech</span>
-          </div>
-          <div class="sector-item">
-            <span class="sector-icon">🔬</span>
-            <span>R&D</span>
-          </div>
-          <div class="sector-item">
-            <span class="sector-icon">✈️</span>
-            <span>Aéronautique</span>
-          </div>
-          <div class="sector-item">
-            <span class="sector-icon">🏥</span>
-            <span>HealthTech</span>
-          </div>
-          <div class="sector-item">
-            <span class="sector-icon">🛡️</span>
-            <span>Défense</span>
-          </div>
-        </div>
-      </div>
-
     </div>
+
+    <!-- CARD : Stat -->
+    <div class="card card-stat">
+      <div class="stat-num">5+</div>
+      <div class="stat-label">années<br>d'expérience</div>
+    </div>
+
+    <!-- CARD : Secteurs -->
+    <div class="card card-sectors">
+      <p class="eyebrow">Secteurs</p>
+      <ul class="sector-list">
+        <li><span>⚖️</span> LegalTech</li>
+        <li><span>🔬</span> R&D / Recherche</li>
+        <li><span>✈️</span> Aéronautique</li>
+        <li><span>🏥</span> HealthTech</li>
+        <li><span>🛡️</span> Défense</li>
+      </ul>
+    </div>
+
   </section>
 
-  <!-- EXPERIENCE -->
-  <section class="section" id="experience">
+  <!-- ═══ EXPERIENCE ═══ -->
+  <section class="content-section" id="experience">
     <div class="section-header">
-      <h2 class="section-title">Expérience</h2>
-      <span class="section-line"></span>
+      <h2 class="section-title">Expérience professionnelle</h2>
+      <div class="section-rule"></div>
     </div>
 
     <div class="timeline">
 
-      <div class="timeline-item timeline-item--current">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="tl-meta">
-            <span class="tl-period">Mars 2024 — aujourd'hui</span>
-            <span class="tl-duration badge badge--accent">2 ans+</span>
-          </div>
-          <h3 class="tl-title">Senior Data Engineer & Référent Technique</h3>
-          <div class="tl-company">
-            LexisNexis
-            <span class="sector-badge">LegalTech</span>
+      <div class="tl-item tl-current">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div>
+              <h3 class="tl-title">Senior Data Engineer & Référent Technique</h3>
+              <div class="tl-company">LexisNexis <span class="sector-tag">LegalTech</span></div>
+            </div>
+            <div class="tl-right">
+              <span class="tl-period mono">Mars 2024 — aujourd'hui</span>
+              <span class="badge badge-accent">2 ans+</span>
+            </div>
           </div>
           <ul class="tl-bullets">
             <li>Développement des API pour une solution RAG (Search Engine + LLM)</li>
             <li>Garant de la qualité, stabilité et maintenabilité du code</li>
             <li>Développement/Intégration d'outils de monitoring et évaluation</li>
           </ul>
-          <div class="tl-tags">
-            <span class="pill pill--hot">Python</span>
-            <span class="pill pill--hot">LLM</span>
-            <span class="pill pill--hot">OpenAI</span>
+          <div class="pill-row">
+            <span class="pill pill-hot">Python</span>
+            <span class="pill pill-hot">LLM</span>
+            <span class="pill pill-hot">OpenAI</span>
             <span class="pill">FastAPI</span>
             <span class="pill">SolR</span>
           </div>
         </div>
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="tl-meta">
-            <span class="tl-period">Sept. 2022 — Fév. 2024</span>
-            <span class="tl-duration badge">1 an et demi</span>
-          </div>
-          <h3 class="tl-title">Ingénieur IA/Logiciel & MLOps</h3>
-          <div class="tl-company">
-            IRT SystemX
-            <span class="sector-badge">R&D</span>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div>
+              <h3 class="tl-title">Ingénieur IA/Logiciel & MLOps</h3>
+              <div class="tl-company">IRT SystemX <span class="sector-tag">R&D</span></div>
+            </div>
+            <div class="tl-right">
+              <span class="tl-period mono">Sept. 2022 — Fév. 2024</span>
+              <span class="badge">1 an et demi</span>
+            </div>
           </div>
           <ul class="tl-bullets">
             <li>Développement logiciel de monitoring d'IA</li>
             <li>Développement d'une API de "model serving"</li>
             <li>Conception & recherche applicative</li>
           </ul>
-          <div class="tl-tags">
+          <div class="pill-row">
             <span class="pill">Python</span>
             <span class="pill">FastAPI</span>
             <span class="pill">Traitement du signal</span>
@@ -231,24 +226,25 @@
         </div>
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="tl-meta">
-            <span class="tl-period">Juin 2021 — Août 2022</span>
-            <span class="tl-duration badge">1 an+</span>
-          </div>
-          <h3 class="tl-title">Ingénieur IA/Logiciel — Traitement d'image</h3>
-          <div class="tl-company">
-            Safran
-            <span class="sector-badge">Aéronautique</span>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div>
+              <h3 class="tl-title">Ingénieur IA/Logiciel — Traitement d'image</h3>
+              <div class="tl-company">Safran <span class="sector-tag">Aéronautique</span></div>
+            </div>
+            <div class="tl-right">
+              <span class="tl-period mono">Juin 2021 — Août 2022</span>
+              <span class="badge">1 an+</span>
+            </div>
           </div>
           <ul class="tl-bullets">
-            <li>Développement/Maintenance C++ sur un logiciel de traitement de volume tomographique (scanner 3D)</li>
+            <li>Développement/Maintenance C++ sur un logiciel de traitement tomographique (scanner 3D)</li>
             <li>Développement Python/C++ d'un algorithme de traitement d'image 3D</li>
             <li>Automatisation de processus industriels</li>
           </ul>
-          <div class="tl-tags">
+          <div class="pill-row">
             <span class="pill">Python</span>
             <span class="pill">C++</span>
             <span class="pill">Traitement d'image</span>
@@ -257,59 +253,66 @@
         </div>
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="tl-meta">
-            <span class="tl-period">Mars 2021 — Juin 2021</span>
-            <span class="tl-duration badge">3 mois</span>
-          </div>
-          <h3 class="tl-title">Ingénieur Logiciel C++</h3>
-          <div class="tl-company">
-            Sopra Steria
-            <span class="sector-badge">Défense</span>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div>
+              <h3 class="tl-title">Ingénieur Logiciel C++</h3>
+              <div class="tl-company">Sopra Steria <span class="sector-tag">Défense</span></div>
+            </div>
+            <div class="tl-right">
+              <span class="tl-period mono">Mars — Juin 2021</span>
+              <span class="badge">3 mois</span>
+            </div>
           </div>
           <ul class="tl-bullets">
             <li>Développement d'un logiciel de simulation de communication radio inter-armées</li>
           </ul>
-          <div class="tl-tags">
+          <div class="pill-row">
             <span class="pill">C++</span>
             <span class="pill">Qt</span>
           </div>
         </div>
       </div>
 
-      <details class="timeline-stages">
-        <summary>Voir les stages →</summary>
-        <div class="stages-inner">
-          <div class="timeline-item">
-            <div class="timeline-dot timeline-dot--small"></div>
-            <div class="timeline-content">
-              <div class="tl-meta">
-                <span class="tl-period">Juil. 2019 — Jan. 2020</span>
-                <span class="tl-duration badge">Stage Bac+6</span>
+      <details class="stages-toggle">
+        <summary>Voir les stages ↓</summary>
+        <div class="tl-item">
+          <div class="tl-dot tl-dot-sm"></div>
+          <div class="tl-card">
+            <div class="tl-top">
+              <div>
+                <h3 class="tl-title">Data Scientist</h3>
+                <div class="tl-company">Cardiologs <span class="sector-tag">HealthTech</span></div>
               </div>
-              <h3 class="tl-title">Data Scientist</h3>
-              <div class="tl-company">Cardiologs <span class="sector-badge">HealthTech</span></div>
-              <ul class="tl-bullets"><li>Deep learning sur séries temporelles (ECG)</li></ul>
-              <div class="tl-tags">
-                <span class="pill">Python</span><span class="pill">TensorFlow/Keras</span><span class="pill">Traitement du signal</span>
+              <div class="tl-right">
+                <span class="tl-period mono">Juil. 2019 — Jan. 2020</span>
+                <span class="badge">Stage Bac+6</span>
               </div>
             </div>
+            <ul class="tl-bullets"><li>Deep learning sur séries temporelles (ECG)</li></ul>
+            <div class="pill-row">
+              <span class="pill">Python</span><span class="pill">TensorFlow/Keras</span><span class="pill">Traitement du signal</span>
+            </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-dot timeline-dot--small"></div>
-            <div class="timeline-content">
-              <div class="tl-meta">
-                <span class="tl-period">Fév. 2018 — Juil. 2018</span>
-                <span class="tl-duration badge">Stage Bac+5</span>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot tl-dot-sm"></div>
+          <div class="tl-card">
+            <div class="tl-top">
+              <div>
+                <h3 class="tl-title">Ingénieur Système Embarqué</h3>
+                <div class="tl-company">SOLENT SAS</div>
               </div>
-              <h3 class="tl-title">Ingénieur Système Embarqué</h3>
-              <div class="tl-company">SOLENT SAS</div>
-              <ul class="tl-bullets"><li>Robot à conduite autonome</li></ul>
-              <div class="tl-tags">
-                <span class="pill">C++11</span><span class="pill">Multi-Thread</span><span class="pill">OpenCV</span>
+              <div class="tl-right">
+                <span class="tl-period mono">Fév. — Juil. 2018</span>
+                <span class="badge">Stage Bac+5</span>
               </div>
+            </div>
+            <ul class="tl-bullets"><li>Robot à conduite autonome</li></ul>
+            <div class="pill-row">
+              <span class="pill">C++11</span><span class="pill">Multi-Thread</span><span class="pill">OpenCV</span>
             </div>
           </div>
         </div>
@@ -318,62 +321,66 @@
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section class="section" id="projects">
+  <!-- ═══ PROJECTS ═══ -->
+  <section class="content-section" id="projects">
     <div class="section-header">
       <h2 class="section-title">Projets personnels</h2>
-      <span class="section-line"></span>
+      <div class="section-rule"></div>
     </div>
 
     <div class="projects-grid">
 
       <article class="project-card">
-        <div class="project-img-wrap">
-          <img src="appImageTrad.png" alt="Webtoon Nexus — translate-flow.fr" />
-          <div class="project-img-overlay">
-            <a href="https://app.translate-flow.fr" target="_blank" rel="noopener" class="btn btn--primary">Voir le site →</a>
+        <div class="project-img">
+          <img src="appImageTrad.png" alt="Webtoon Nexus" />
+          <div class="project-img-hover">
+            <a href="https://app.translate-flow.fr" target="_blank" class="btn btn-primary">Voir le site ↗</a>
           </div>
         </div>
         <div class="project-body">
-          <div class="project-header">
-            <h3 class="project-title">Webtoon Nexus</h3>
-            <span class="project-status project-status--live">Live</span>
+          <div class="project-top">
+            <div>
+              <h3 class="project-name">Webtoon Nexus</h3>
+              <p class="project-url mono">app.translate-flow.fr</p>
+            </div>
+            <span class="status-live">● Live</span>
           </div>
-          <p class="project-url mono">app.translate-flow.fr</p>
           <p class="project-desc">
-            Plateforme SaaS de traduction automatique de webtoons. Pipeline complet : OCR (Google Vision) → inpainting (LaMa/OpenCV) → traduction (Claude LLM) → rendu. Système de crédits intégré.
+            Plateforme SaaS de traduction automatique de webtoons. Pipeline : OCR (Google Vision) → inpainting (LaMa/OpenCV) → traduction LLM (Claude) → rendu. Interface Vue 3, backend FastAPI, système de crédits intégré.
           </p>
-          <div class="project-tech">
-            <span class="pill">Vue 3</span>
-            <span class="pill">FastAPI</span>
-            <span class="pill pill--hot">Claude API</span>
+          <div class="pill-row">
+            <span class="pill pill-hot">Vue 3</span>
+            <span class="pill pill-hot">FastAPI</span>
+            <span class="pill pill-hot">Claude API</span>
             <span class="pill">Google Vision</span>
+            <span class="pill">LaMa / OpenCV</span>
             <span class="pill">MongoDB</span>
             <span class="pill">Docker</span>
-            <span class="pill">CI/CD</span>
           </div>
         </div>
       </article>
 
       <article class="project-card">
-        <div class="project-img-wrap">
+        <div class="project-img">
           <img src="medokChat.png" alt="MedokChat" />
         </div>
         <div class="project-body">
-          <div class="project-header">
-            <h3 class="project-title">MedokChat</h3>
-            <span class="project-status">Perso</span>
+          <div class="project-top">
+            <div>
+              <h3 class="project-name">MedokChat</h3>
+              <p class="project-url mono">multi-agent · Google ADK</p>
+            </div>
+            <span class="status-wip">● Perso</span>
           </div>
-          <p class="project-url mono">github · multi-agent</p>
           <p class="project-desc">
-            Plateforme de chat médical multi-agent construite sur Google ADK. Trois agents spécialisés (orchestrateur, recherche ANSM, documentation) pour répondre à des questions sur les médicaments en consultant la base officielle.
+            Chatbot médical multi-agent (Google ADK + Claude). Trois agents spécialisés — orchestrateur, recherche ANSM, documentation officielle — pour répondre à des questions sur les médicaments à partir de la base publique des médicaments.
           </p>
-          <div class="project-tech">
-            <span class="pill pill--hot">Google ADK</span>
-            <span class="pill pill--hot">Claude API</span>
+          <div class="pill-row">
+            <span class="pill pill-hot">Google ADK</span>
+            <span class="pill pill-hot">Claude API</span>
             <span class="pill">Python</span>
             <span class="pill">Gradio</span>
-            <span class="pill">ANSM API</span>
+            <span class="pill">ANSM</span>
           </div>
         </div>
       </article>
@@ -381,57 +388,58 @@
     </div>
   </section>
 
-  <!-- FORMATION + CONTACT -->
-  <section class="section section--footer" id="contact">
+  <!-- ═══ FOOTER ═══ -->
+  <section class="content-section footer-section" id="contact">
     <div class="footer-grid">
 
-      <div class="footer-block">
-        <h2 class="section-title">Formation</h2>
-        <div class="edu-cards">
+      <div>
+        <h2 class="section-title" style="margin-bottom:1.2rem">Formation</h2>
+        <div class="edu-list">
           <div class="edu-card">
-            <div class="edu-year mono">2018 – 2019</div>
+            <span class="mono edu-year">2018 – 2019</span>
             <div class="edu-degree">Mastère Big Data <span class="edu-badge">Bac+6</span></div>
             <div class="edu-school">Télécom Paris — Institut Mines-Télécom</div>
-            <div class="edu-tags">
-              <span class="pill">Data Science</span><span class="pill">Deep Learning</span><span class="pill">Cloud</span>
+            <div class="pill-row" style="margin-top:.5rem">
+              <span class="pill">Data Science</span>
+              <span class="pill">Deep Learning</span>
+              <span class="pill">Cloud / Big Data</span>
             </div>
           </div>
           <div class="edu-card">
-            <div class="edu-year mono">2015 – 2018</div>
+            <span class="mono edu-year">2015 – 2018</span>
             <div class="edu-degree">École d'ingénieur aérospatiale</div>
             <div class="edu-school">IPSA — Paris</div>
-            <div class="edu-tags">
-              <span class="pill">C++</span><span class="pill">Ingénierie aéro</span><span class="pill">Systèmes autonomes</span>
+            <div class="pill-row" style="margin-top:.5rem">
+              <span class="pill">C++</span>
+              <span class="pill">Systèmes embarqués</span>
+              <span class="pill">Véhicule autonome</span>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="footer-block">
-        <h2 class="section-title">Contact</h2>
+      <div>
+        <h2 class="section-title" style="margin-bottom:1.2rem">Contact & À propos</h2>
         <div class="contact-list">
           <a href="mailto:thibaultroyet@gmail.com" class="contact-row">
-            <span class="contact-icon">✉</span>
-            <span>thibaultroyet@gmail.com</span>
+            <span class="contact-icon">✉</span> thibaultroyet@gmail.com
           </a>
           <a href="tel:+33615950096" class="contact-row">
-            <span class="contact-icon">☎</span>
-            <span>+33 6.15.95.00.96</span>
+            <span class="contact-icon">☎</span> +33 6.15.95.00.96
           </a>
-          <a href="https://www.linkedin.com/in/thibault-royet" target="_blank" rel="noopener" class="contact-row">
-            <span class="contact-icon">in</span>
-            <span>linkedin.com/in/thibault-royet</span>
+          <a href="https://www.linkedin.com/in/thibault-royet" target="_blank" class="contact-row">
+            <span class="contact-icon">in</span> linkedin.com/in/thibault-royet
           </a>
         </div>
-        <div class="langs">
+        <div class="lang-block">
           <div class="lang-row"><span>Français</span><span class="mono">Natif</span></div>
-          <div class="lang-row"><span>Anglais</span><span class="mono">Courant · TOEIC 850</span></div>
+          <div class="lang-row"><span>Anglais</span><span class="mono">Courant · TOEIC 850/990</span></div>
         </div>
-        <div class="passions">
-          <span>🏄 Wake Board · Ski</span>
-          <span>🧬 MedTech · Génétique</span>
-          <span>🚀 Space · SpaceX</span>
-          <span>💻 Coding Game top 2%</span>
+        <div class="passion-block">
+          <span>🏄 Wake Board · Ski nautique · Ski</span>
+          <span>🧬 Innovation Santé · MedTech · Génétique</span>
+          <span>🚀 Space · SpaceX · Exploration spatiale</span>
+          <span>💻 Coding Game <strong>top 2%</strong></span>
         </div>
       </div>
 
@@ -439,25 +447,23 @@
   </section>
 
   <script>
-    // Animate skill bars on scroll into view
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.querySelectorAll('.bar-fill').forEach((bar, i) => {
-            bar.style.transitionDelay = `${i * 100}ms`;
-            bar.style.width = bar.style.getPropertyValue('--p') || getComputedStyle(bar).getPropertyValue('--p');
-            bar.classList.add('animate');
-          });
-        }
-      });
-    }, { threshold: 0.3 });
-
-    document.querySelectorAll('.card--skills').forEach(el => observer.observe(el));
-
     // Nav scroll effect
     window.addEventListener('scroll', () => {
-      document.querySelector('.nav').classList.toggle('nav--scrolled', window.scrollY > 40);
+      document.getElementById('nav').classList.toggle('nav-scrolled', window.scrollY > 50);
     });
+
+    // Skill bar animation on scroll
+    const skillsCard = document.querySelector('.js-skills');
+    const io = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) {
+        skillsCard.querySelectorAll('.bar-fill').forEach((el, i) => {
+          el.style.transitionDelay = (i * 100) + 'ms';
+          el.classList.add('animate');
+        });
+        io.disconnect();
+      }
+    }, { threshold: 0.4 });
+    if (skillsCard) io.observe(skillsCard);
   </script>
 
 </body>
