@@ -53,6 +53,12 @@ ul { list-style: none; }
   padding: .35rem .9rem; border-radius: 7px; transition: opacity .2s !important;
 }
 .nav-cta:hover { opacity: .8; }
+.nav-pdf {
+  background: transparent; color: var(--muted); border: 1px solid var(--border);
+  padding: .35rem .9rem; border-radius: 7px; font-family: var(--font-b);
+  font-size: .85rem; font-weight: 500; cursor: pointer; transition: border-color .2s, color .2s;
+}
+.nav-pdf:hover { border-color: var(--accent); color: var(--text); }
 
 /* ═══════════════════════════════════════════
    Header compact
@@ -377,9 +383,67 @@ ul { list-style: none; }
    Print
 ═══════════════════════════════════════════ */
 @media print {
-  body { background: #fff; color: #111; }
-  .nav, .project-img-hover { display: none; }
-  .card, .tl-card, .project-card, .edu-card { background: #f8f8f8; border: 1px solid #ddd; box-shadow: none; }
-  .bar-fill { width: var(--p) !important; }
-  .hero-name { background: none; -webkit-text-fill-color: #111; }
+  @page { margin: 1.2cm 1.5cm; size: A4; }
+
+  body { background: #fff; color: #111; font-size: 11pt; }
+
+  /* Masquer ce qui ne sert pas à l'impression */
+  .nav, .nav-pdf, .project-img-hover, .stages-toggle summary,
+  .btn-row, .footer-section { display: none !important; }
+
+  /* Ouvrir les stages automatiquement */
+  .stages-toggle { display: block; }
+  .stages-toggle > div { display: block !important; }
+
+  /* Header */
+  .cv-header { border-bottom: 2px solid #72243D; background: none; }
+  .cv-header-inner { padding: .6rem 0; }
+  .header-name { font-size: 18pt; -webkit-text-fill-color: #111; background: none; }
+  .header-title { color: #72243D; }
+  .header-meta a, .header-meta span { color: #444; }
+  .trait { color: #555; border-color: #ccc; }
+
+  /* Bento grid : 4 colonnes sur une ligne */
+  .bento-section { padding: .6rem 0; gap: .5rem; page-break-after: avoid; }
+  .card { background: #f9f9f9; border: 1px solid #ddd; box-shadow: none; padding: .7rem; }
+  .card:hover { border-color: #ddd; box-shadow: none; }
+
+  /* Barres */
+  .bar-fill { width: var(--p) !important; transition: none !important; background: #72243D; }
+  .xp-seg { background: var(--c) !important; }
+
+  /* Pills */
+  .pill { border-color: #ccc; color: #444; background: none; }
+  .pill-hot { border-color: #72243D; color: #72243D; background: none; }
+
+  /* Timeline */
+  .content-section { padding: .8rem 0; border-top: 1px solid #ddd; }
+  .section-title { color: #111; }
+  .timeline::before { background: #72243D; }
+  .tl-dot { background: #72243D; border-color: #fff; box-shadow: none; }
+  .tl-card { background: #f9f9f9; border: 1px solid #ddd; box-shadow: none; padding: .6rem .8rem; }
+  .tl-card:hover { border-color: #ddd; }
+  .tl-title { color: #111; }
+  .tl-company { color: #72243D; }
+  .tl-bullets li { color: #444; }
+  .badge { border-color: #ccc; color: #666; background: none; }
+  .badge-accent { border-color: #72243D; color: #72243D; background: none; }
+
+  /* Projets : pas d'image en print */
+  .project-img { display: none; }
+  .project-card { border: 1px solid #ddd; background: #f9f9f9; box-shadow: none; }
+  .project-name { color: #111; }
+  .project-desc { color: #444; }
+  .status-live { color: #2a7a40; background: none; border-color: #2a7a40; }
+
+  /* Edu */
+  .edu-card { background: #f9f9f9; border: 1px solid #ddd; }
+  .edu-degree { color: #111; }
+  .edu-badge { color: #8B6914; background: none; }
+
+  /* Sauts de page */
+  #experience { page-break-before: auto; }
+  #projects { page-break-before: auto; }
+  .tl-item { page-break-inside: avoid; }
+  .project-card { page-break-inside: avoid; }
 }
